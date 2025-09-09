@@ -1,0 +1,17 @@
+{
+  "name": "realtime-ticker",
+  "private": true,
+  "workspaces": ["app", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix app run dev\"",
+    "ci": "npm run lint && npm -ws run test",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^3.3.3"
+  }
+}
